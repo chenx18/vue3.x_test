@@ -6,6 +6,42 @@ const layout = [
         component: () => import('../views/Home')
     },
     {
+        name: 'Composition',
+        icon:'图标 icon-tubiao1',
+        children:[
+            {
+                path:'/layout/Composition/setup',
+                name:'setup',
+                component: () => import('../components/compositionDemo/cmSetup')
+            }, 
+            {
+                path:'/layout/Composition/ref',
+                name:'ref',
+                component: () => import('../components/compositionDemo/cmref')
+            },
+            {
+                path:'/layout/Composition/reactive',
+                name:'reactive',
+                component: () => import('../components/compositionDemo/cmreactive')
+            },
+            {
+                path:'/layout/Composition/cmtoRef',
+                name:'toRef',
+                component: () => import('../components/compositionDemo/cmtoRef')
+            },
+            {
+                path:'/layout/Composition/cmtoRefs',
+                name:'toRefs',
+                component: () => import('../components/compositionDemo/cmtoRefs')
+            },
+            {
+                path:'/layout/Composition/cmwatch',
+                name:'watch',
+                component: () => import('../components/compositionDemo/cmwatch')
+            },
+        ]
+    },
+    {
         path: '/layout/icon',
         name: '图标',
         icon:'图标 icon-tubiao1',
@@ -26,33 +62,33 @@ const layout = [
             }
         ]
     },
-    {
-        name: '文档',
-        icon:'文档 icon-ziyuan',
-        children:[
-            {
-                path:'/layout/docs/drag',
-                name:'拖拽',
-                component:() =>import('../views/Docs/Drag')
-            },
-            {
-                path:'/layout/docs/xlsx',
-                name:'解析xlsx',
-                component: () =>import('../views/Docs/Xlsx')
-            }
-        ]
-    },
-    {
-        name: '游戏',
-        icon:'游戏 icon-youxi-yuanshijituantubiao',
-        children:[
-            {
-                path:'/layout/game/greedysnake',
-                name:"贪吃 🐍",
-                component: ()=>import('../views/Game/GreedySnake')
-            }
-        ]
-    },
+    // {
+    //     name: '文档',
+    //     icon:'文档 icon-ziyuan',
+    //     children:[
+    //         {
+    //             path:'/layout/docs/drag',
+    //             name:'拖拽',
+    //             component:() =>import('../views/Docs/Drag')
+    //         },
+    //         {
+    //             path:'/layout/docs/xlsx',
+    //             name:'解析xlsx',
+    //             component: () =>import('../views/Docs/Xlsx')
+    //         }
+    //     ]
+    // },
+    // {
+    //     name: '游戏',
+    //     icon:'游戏 icon-youxi-yuanshijituantubiao',
+    //     children:[
+    //         {
+    //             path:'/layout/game/greedysnake',
+    //             name:"贪吃 🐍",
+    //             component: ()=>import('../views/Game/GreedySnake')
+    //         }
+    //     ]
+    // },
     {
       path:'/layout/personal',
       name:'个人中心',
